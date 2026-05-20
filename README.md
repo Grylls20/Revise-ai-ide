@@ -1,16 +1,16 @@
 # Revise AI IDE
 
-Revise AI IDE is a modern, AI-powered code execution and analysis platform. It features a full-stack architecture with a highly modular React (Next.js) frontend and a robust Spring Boot backend. 
+Hey there! Welcome to **Revise AI IDE**, a modern, AI-powered code execution and analysis platform that I built. My goal was to create a full-stack development environment that runs completely in your browser, utilizing a highly modular React (Next.js) frontend and a robust Spring Boot backend. 
 
-The IDE integrates zero-cost cloud execution strategies via Wandbox and real-time AI code reviews using Google's bleeding-edge Gemini Flash API.
+The most exciting part of this project is that I successfully integrated zero-cost cloud execution strategies via Wandbox and real-time AI code reviews using Google's bleeding-edge Gemini Flash API!
 
 ## Features
 
-* **Multi-Language Support**: Write and execute Python, JavaScript, Go, Rust, Ruby, and C++ directly in the browser via the robust Wandbox API.
-* **Instant AI Code Reviews**: Click a button to get immediate analysis, bug detection, and suggested refactoring from Google Gemini AI.
-* **Modern UI Architecture**: A beautiful, 3-column light/dark mode aesthetic leveraging glassmorphism and Monaco Editor, directly inspired by premium industry standards.
-* **Zero-Cost Infrastructure**: The backend leverages 100% free external APIs (Wandbox for execution and AI Studio for LLM access) to guarantee zero subscription overhead.
-* **Extensible Strategy Patterns**: The Java backend uses Factory, Strategy, and Builder patterns, making it trivial to swap execution engines or AI models in the future.
+* **Multi-Language Support**: You can write and execute Python, JavaScript, Go, Rust, Ruby, and C++ directly in my IDE thanks to the robust Wandbox API integration.
+* **Instant AI Code Reviews**: I've added a feature where you can click a single button to get immediate analysis, bug detection, and suggested refactoring directly from Google Gemini AI.
+* **Modern UI Architecture**: I designed a beautiful, 3-column light/dark mode aesthetic leveraging glassmorphism and Monaco Editor, directly inspired by premium industry standards.
+* **Zero-Cost Infrastructure**: I built the backend to leverage 100% free external APIs (Wandbox for execution and AI Studio for LLM access) to guarantee that this IDE has zero subscription overhead.
+* **Extensible Strategy Patterns**: I architected the Java backend using Factory, Strategy, and Builder patterns, making it trivial for me to swap execution engines or AI models in the future.
 
 ## Tech Stack
 
@@ -29,6 +29,7 @@ The IDE integrates zero-cost cloud execution strategies via Wandbox and real-tim
 ## Getting Started
 
 ### Prerequisites
+Make sure you have these installed:
 - Node.js (v18 or higher)
 - Java 17+
 - Maven
@@ -36,12 +37,12 @@ The IDE integrates zero-cost cloud execution strategies via Wandbox and real-tim
 ### Installation & Running
 
 1. **Start the Backend**
-   Navigate to the backend directory and run the Spring Boot server:
+   Navigate to the backend directory and run my Spring Boot server:
    ```bash
    cd backend
    ./mvnw spring-boot:run
    ```
-   *The backend runs on `http://localhost:8081`.*
+   *The backend will run on `http://localhost:8081`.*
 
 2. **Start the Frontend**
    Open a new terminal, navigate to the frontend directory, install dependencies, and start the Next.js development server:
@@ -50,15 +51,16 @@ The IDE integrates zero-cost cloud execution strategies via Wandbox and real-tim
    npm install
    npm run dev
    ```
-   *The frontend runs on `http://localhost:3000`.*
+   *The frontend will run on `http://localhost:3000`.*
 
 ## Environment Variables
 
-Make sure to populate your `application.properties` in the backend (`backend/src/main/resources/application.properties`):
+Make sure to populate your `.env` in the backend (`backend/.env`). You can use my `.env.example` as a template:
 
 ```properties
-server.port=8081
-gemini.api.key=YOUR_GEMINI_API_KEY
+RAPIDAPI_KEY=your_key
+XAI_API_KEY=your_key
+GEMINI_API_KEY=your_key
 ```
 
 ## Contributing
