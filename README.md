@@ -2,8 +2,6 @@
 
 A modern, AI-powered code execution and analysis platform. It provides a full-stack browser-based development environment using a modular React (Next.js) frontend and a robust Spring Boot backend.
 
-Features include real-time AI code reviews powered by Google's Gemini Flash API and zero-cost cloud execution. The stack is deployed with the backend on **AWS EC2** and the frontend on **Netlify**, utilizing a server-side proxy architecture to handle cross-origin communication securely.
-
 🚀 **Live at: [https://revise-ai-ide.netlify.app](https://revise-ai-ide.netlify.app)**
 
 ---
