@@ -58,8 +58,6 @@ Make sure you have these installed:
 Make sure to populate your `.env` in the backend (`backend/.env`). You can use my `.env.example` as a template:
 
 ```properties
-RAPIDAPI_KEY=your_key
-XAI_API_KEY=your_key
 GEMINI_API_KEY=your_key
 ```
 

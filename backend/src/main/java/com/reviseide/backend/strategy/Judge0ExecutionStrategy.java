@@ -3,7 +3,6 @@ package com.reviseide.backend.strategy;
 import com.reviseide.backend.dto.ExecutionRequest;
 import com.reviseide.backend.dto.ExecutionResponse;
 import com.reviseide.backend.builder.CodeSubmissionBuilder;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 import java.util.Map;
@@ -12,11 +11,8 @@ import java.util.Map;
 public class Judge0ExecutionStrategy implements ExecutionStrategy {
 
     private final WebClient webClient;
-    // For production, use RapidAPI Judge0 endpoint or self-hosted endpoint
+    // Public free Judge0 CE endpoint (no API key required)
     private static final String JUDGE0_URL = "https://judge0-ce.p.rapidapi.com";
-    
-    @Value("${rapidapi.key}")
-    private String apiKey;
 
     public Judge0ExecutionStrategy() {
         this.webClient = WebClient.create(JUDGE0_URL);
@@ -35,8 +31,6 @@ public class Judge0ExecutionStrategy implements ExecutionStrategy {
             // Wait=true to get synchronous response back
             Map<String, Object> response = webClient.post()
                     .uri("/submissions?base64_encoded=false&wait=true")
-                    .header("X-RapidAPI-Key", apiKey)
-                    .header("X-RapidAPI-Host", "judge0-ce.p.rapidapi.com")
                     .bodyValue(payload)
                     .retrieve()
                     .bodyToMono(Map.class)

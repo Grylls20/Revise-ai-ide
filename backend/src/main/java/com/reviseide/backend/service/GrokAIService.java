@@ -14,9 +14,6 @@ public class GrokAIService implements AIReviewService {
 
     private final WebClient webClient;
     private static final String XAI_API_URL = "https://api.x.ai/v1/chat/completions";
-    
-    @org.springframework.beans.factory.annotation.Value("${xai.api.key}")
-    private String apiKey;
 
     public GrokAIService() {
         this.webClient = WebClient.create(XAI_API_URL);
@@ -30,7 +27,6 @@ public class GrokAIService implements AIReviewService {
                     .buildPayload();
 
             Map<String, Object> response = webClient.post()
-                    .header("Authorization", "Bearer " + apiKey)
                     .header("Content-Type", "application/json")
                     .bodyValue(payload)
                     .retrieve()
