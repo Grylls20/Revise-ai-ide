@@ -31,7 +31,7 @@ export default function Home() {
   const handleRun = async () => {
     setRunning(true);
     try {
-      const response = await fetch('http://localhost:8081/api/v1/execute', {
+      const response = await fetch(`/api/v1/execute`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -60,7 +60,7 @@ export default function Home() {
     setLoading(true);
     setReview(null);
     try {
-      const response = await fetch('http://localhost:8081/api/v1/review', {
+      const response = await fetch(`/api/v1/review`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
