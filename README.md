@@ -10,12 +10,12 @@ Features include real-time AI code reviews powered by Google's Gemini Flash API 
 
 ## Features
 
-Multi-Language Support: Write and execute Python, JavaScript, Go, Rust, Ruby, and C++ directly in the browser.
-Instant AI Code Reviews: One click gets you immediate analysis, bug detection, and refactoring suggestions.
-Modern UI Architecture: A 3-column light/dark mode aesthetic with glassmorphism and Monaco Editor.
-Zero-Cost Infrastructure: The entire stack uses free-tier services.
-Extensible Design Patterns: The Java backend is architected using Factory, Strategy, and Builder patterns.
-Production-Ready Deployment: Next.js API routes act as a server-side proxy to the EC2 backend.
+- Multi-Language Support: Write and execute Python, JavaScript, Go, Rust, Ruby, and C++ directly in the browser.
+- Instant AI Code Reviews: One click gets you immediate analysis, bug detection, and refactoring suggestions.
+- Modern UI Architecture: A 3-column light/dark mode aesthetic with glassmorphism and Monaco Editor.
+- Zero-Cost Infrastructure: The entire stack uses free-tier services.
+- Extensible Design Patterns: The Java backend is architected using Factory, Strategy, and Builder patterns.
+- Production-Ready Deployment: Next.js API routes act as a server-side proxy to the EC2 backend.
 
 ---
 
